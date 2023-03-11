@@ -1,0 +1,27 @@
+{
+  "name": "graphql-setup-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "babel-plugin-module-resolver": "^5.0.0",
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.4.0",
+    "graphql": "^16.6.0",
+    "lodash": "^4.17.21"
+  },
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/index.js",
+    "build": "babel src -d build",
+    "start": "yarn build && node build/index.js"
+  }
+}
